@@ -115,6 +115,7 @@ export default {
      @media screen and (max-width: 640px) {
         .actual-weather {
             max-width: 100%;
+            margin: 20px auto;
         }
     }
 </style>
