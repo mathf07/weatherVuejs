@@ -1,4 +1,4 @@
-#WeatherVuejs
+# WeatherVuejs
 
 A simple weather page made with Vuejs and this API: https://www.prevision-meteo.ch/services
 
