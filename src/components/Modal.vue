@@ -87,6 +87,13 @@ export default {
         animation-name: animatetop;
         animation-duration: 0.4s
     }
+
+     @media screen and (max-width: 640px) {
+        .modal-content {
+            width: 90vw;
+            height: 70vh;
+        }
+    }
     
     /* Add Animation */
     @-webkit-keyframes animatetop {
