@@ -1,38 +1,30 @@
 <template>
     <div class="actual-weather">
-        <div class="ui two column stackable centered grid">
-            <div class="column center aligned ">
-                <h3><i class="map marker alternate icon"></i>{{weatherLocation()}}</h3>
+        <div class="ui stackable grid">
+            <div class="row">
+                <div class="sixteen column center aligned ">
+                    <h3><i class="map marker alternate icon"></i>{{weatherLocation()}}</h3>
+                </div>
             </div>
-            <div class="four column centered row">
+            <div class="three column row">
+                <div class="column left aligned">
+                    <p><i class="sun  icon"></i> {{actualSunrise()}}</p>  
+                    <p><i class="moon icon"></i> {{actualSunset()}}</p>
+                    <p class="actual-condition-details">
+                        <i class="icons">
+                            <i class="tint icon"></i>
+                            <i class="inverted corner percent icon"></i>
+                        </i>
+                        {{actualHumidity()}}
+                    </p>
+                    <p><i class="flag icon"></i>{{actualWind()}}</p>      
+                </div>
                 <div class="column center aligned">
                     <img :src="actualWeatherIcon()" alt="">
-                </div>
+                    <p class="actual-condition">{{actualWeatherCondition()}}</p>
+                </div>   
                 <div class="column center aligned">
                     <p class="actual-temp"><i class="thermometer half icon"></i>{{actualWeatherTemp()}} <span class="temp-min"> ({{tempMin()}} | {{tempMax()}}) </span></p>
-                </div>
-            </div>
-            <div class="two column centered row">
-                <div class="column center aligned">
-                    <p class="actual-condition">{{actualWeatherCondition()}}</p>
-                </div>
-            </div>
-            <div class="four column centered row actual-condition-details">
-                <div class="column center aligned">
-                    <p><i class="sun  icon"></i> {{actualSunrise()}}</p>  
-                    <p><i class="moon icon"></i> {{actualSunset()}}</p>      
-                </div>
-                <div class="column center aligned">
-                    <div class="actual-condition-details">
-                        <p>
-                            <i class="icons">
-                                <i class="tint icon"></i>
-                                <i class="inverted corner percent icon"></i>
-                            </i>
-                            {{actualHumidity()}}
-                        </p>
-                        <p><i class="flag icon"></i>{{actualWind()}}</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -117,8 +109,13 @@ export default {
         font-weight: 300
     }
     .actual-weather {
-        width: 70%;
-        margin: 40px auto;
+        max-width: 60%;
+        margin: 50px auto;
+    }
+     @media screen and (max-width: 640px) {
+        .actual-weather {
+            max-width: 100%;
+        }
     }
 </style>
 
