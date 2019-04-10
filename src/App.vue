@@ -207,7 +207,7 @@ export default {
     }
     @media screen and (max-width: 640px) {
         .search {
-            padding: 50px 0px;
+            padding: 50px 0 0 0;
         }
     }
 
