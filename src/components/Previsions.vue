@@ -95,6 +95,9 @@ export default {
             if(n === 0) {
                 return `Aujourd'hui`
             }
+            else if (n === 1) {
+                return 'Demain'
+            }
             return this.datas.fcst_day_0 ? this.datas[day]['day_long'] : ''
         },
 
