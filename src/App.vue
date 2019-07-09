@@ -37,7 +37,7 @@ import Modal from "./components/Modal.vue";
 
 
 const apiBaseUrl = "https://www.prevision-meteo.ch/services/json/";
-const apiCities = "https://cors.io/?https://www.prevision-meteo.ch/services/json/list-cities";
+const apiCities = "https://cors-anywhere.herokuapp.com/https://www.prevision-meteo.ch/services/json/list-cities";
 
 export default {
     name: "app",
